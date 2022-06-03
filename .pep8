@@ -1,0 +1,4 @@
+# https://pypi.org/project/autopep8/#usage
+
+[pycodestyle]
+max_line_length = 120

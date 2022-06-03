@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.166.1/containers/python-3
+{
+  "name": "Yonder Makers Jupyter Notebook Setup",
+  "runArgs": ["-m=16g", "--network=host"],
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {}
+  },
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "python.pythonPath": "/usr/local/bin/python",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.yapfPath": "/usr/local/bin/yapf",
+    "python.linting.banditPath": "/usr/local/bin/bandit",
+    "python.linting.flake8Path": "/usr/local/bin/flake8"
+  },
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "mtxr.sqltools",
+    "mtxr.sqltools-driver-pg",
+    "esbenp.prettier-vscode",
+    "ninoseki.vscode-pylens",
+    "eamodio.gitlens"
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [4040],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "pip3 install --user -r requirements.txt"
+
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  // "remoteUser": "vscode"
+}

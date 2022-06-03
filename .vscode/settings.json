@@ -1,0 +1,19 @@
+{​​​​​​​​
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": false,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": ["--max-line-length", "120", "--experimental"],
+  "python.autoComplete.extraPaths": [
+    "./src"
+  ],
+  "python.analysis.extraPaths": [
+    "./src"
+  ],
+  "python.linting.pylintArgs": ["--disable=C0114"],
+  "editor.tabSize": 2,
+  "editor.rulers": [100, 120],
+  "editor.formatOnSave": true,
+  "jupyter.interactiveWindowMode": "single",
+  "prettier.requireConfig": true
+}
